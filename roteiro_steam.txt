@@ -1,0 +1,52 @@
+Icaro Santos Aurich // IFBA - Estrutura de dados
+Este cript irá simular um catálogo de jogos, baseado na Steam
+Não será levado em consideração, inicialmente, o fato de que um jogo pode ter 2 ou mais categorias
+	ideia:(perguntar o jogo, depois a quais categorias ele pertence, assim poderá adicionar 2 ou mais)
+	
+1 - Ter uma lista principal simplesmente encadeada ordenada de forma alfabética
+	categoria dos jogos (Aventura, Luta...)
+2 - Ter uma sub-lista duplamente encadeada circular da lista 1 também ordenada de forma alfabética
+	Os jogos que entraram inicialmente na lista 1 para depois entrar na lista 2
+	Jogos em si (Tomb Raide, Street Fighter...)
+
+OBS: testar com o caso mais simples mas não simples demais para iniciar de forma auto-incrementável (ou seja, testar com uns 3 elementos)
+	 usar o conceito de meio para reduzir o tempo de busca
+	 pensar se será viável usar o conceito de cauda
+	 Faça def sem medo de ser feliz, quanto mais def para funções pequenas, melhor para entender o código quando existem muitas linhas
+	 Faça anotações e observações dentro do código para fácil entender
+		Procure documentar o código de forma que outro programador, pegue, leia, e entenda
+		Por que vai passar 2 dias e vc n vai lembrar de p nenhuma
+	 
+Precisa fazer:
+	 Adicionar
+	 Remover
+	 Buscar
+	 Imprimir
+	 
+Principais conceitos para tratamento de erro:
+	Inserir com lista vazia
+	Buscar com lista vazia
+	Imprimir lista vazia
+	Inserir antes do primeiro
+	Inserir no meio
+	Inserir no final
+	Remover com lista vazia
+	Remover primeiro (que eu acho que vai ser igual o meio)
+	Remover ultimo	
+	Deve ter mais conceitos anotados no caderno
+	 
+Para lista 1 - Simplesmente encadeada
+	Criar uma class lista_principal(categoria)
+		Valor // que vai guardar a categoria (nome(str))
+		sub_list // inicialmente none, mas vai uma lista tbm, com valor e prox, um obj.
+		prox_categoria // como será simplesmente encadeada, usar o conceito anterior para proseguir até o fim das categorias
+		
+Para lista 2 - Duplamente encadeada circular
+	Criar uma class lista_secundária(jogos)
+		valor // Que vai guardar o jogo (nome(str))
+		ant // anterior
+		prox // proximo
+		rank // rank
+		preço // preço
+
+// Depois com tudo redondo, procurar otimizar
